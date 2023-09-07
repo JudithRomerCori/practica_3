@@ -1,23 +1,23 @@
-// Materia: ProgramaciÛn I, Paralelo 1
+// Materia: Programaci√≥n I, Paralelo 1
 
 // Autor: Judith Marisol Romero Cori
 
-// Fecha creaciÛn: 6/09/2023
+// Fecha creaci√≥n: 6/09/2023
 
-// Fecha modificaciÛn: 6/09/2023
+// Fecha modificaci√≥n: 6/09/2023
 
-// N˙mero de ejericio:4
+// N√∫mero de ejericio:4
 
-// Problema planteado:
+// Problema planteado:En la segunda temporada de The Walking Dead, los personajes llegaron a una c√°rcel para refugiarse. La c√°rcel estaba rodeada de vallas por lo que los muertos vivientes no pod√≠an entrar en ella. Sin embargo, dentro de las instalaciones aun exist√≠an muertos vivientes que amenazaban a los personajes. Por tanto, Rick y otros miembros del grupo decidieron ir a investigar las instalaciones con el fin de determinar cu√°les eran los lugares seguros. Para lograr su objetivo construyeron un mapa basado en una matriz que indicaba las zonas seguras. Despu√©s de un tiempo, tu grupo llega al mismo complejo y encuentra el mapa hecho por Rick. Para mantener a salvo a tus amigos decides dise√±ar e implementar un programa que te ayude a determinar las zonas seguras. 
 
 
 #include <iostream>
 #include <vector>
 
-const int FILAS = 3; // N˙mero de filas de la matriz
-const int COLUMNAS = 4; // N˙mero de columnas de la matriz
+const int FILAS = 3; // N√∫mero de filas de la matriz
+const int COLUMNAS = 4; // N√∫mero de columnas de la matriz
 
-// FunciÛn para mostrar la matriz
+// Funci√≥n para mostrar la matriz
 void mostrarMatriz(const vector<vector<char>>& matriz)
 {
     for (int i = 0; i < FILAS; ++i) {
@@ -28,7 +28,7 @@ void mostrarMatriz(const vector<vector<char>>& matriz)
     }
 }
 
-// FunciÛn para contar filas y columnas seguras
+// Funci√≥n para contar filas y columnas seguras
 void contarFilasColumnasSeguras(const vector<vector<char>>& matriz, int& filasSeguras, int& columnasSeguras)
 {
     filasSeguras = 0;
@@ -61,7 +61,7 @@ void contarFilasColumnasSeguras(const vector<vector<char>>& matriz, int& filasSe
     }
 }
 
-// FunciÛn para encontrar las coordenadas de los muertos vivientes
+// Funci√≥n para encontrar las coordenadas de los muertos vivientes
 void encontrarCoordenadasMuertos(const vector<vector<char>>& matriz, vector<int>& filasMuertos, vector<int>& columnasMuertos)
 {
     filasMuertos.clear();
@@ -77,7 +77,7 @@ void encontrarCoordenadasMuertos(const vector<vector<char>>& matriz, vector<int>
     }
 }
 
-// FunciÛn para contar la cantidad de muertos vivientes
+// Funci√≥n para contar la cantidad de muertos vivientes
 int contarMuertosVivientes(const vector<vector<char>>& matriz)
 {
     int contador = 0;
@@ -102,14 +102,14 @@ int main() {
     };
 
     // a. Mostrar la matriz
-    cout << "a. Matriz que describe el ·rea:" << endl;
+    cout << "a. Matriz que describe el √°rea:" << endl;
     mostrarMatriz(matriz);
 
     // b. Contar filas y columnas seguras
     int filasSeguras, columnasSeguras;
     contarFilasColumnasSeguras(matriz, filasSeguras, columnasSeguras);
-    cout << "\nb. N˙mero de filas seguras: " << filasSeguras << endl;
-    cout << "   N˙mero de columnas seguras: " << columnasSeguras << endl;
+    cout << "\nb. N√∫mero de filas seguras: " << filasSeguras << endl;
+    cout << "   N√∫mero de columnas seguras: " << columnasSeguras << endl;
 
     // c. Encontrar las coordenadas de los muertos vivientes
     vector<int> filasMuertos, columnasMuertos;
@@ -123,7 +123,7 @@ int main() {
     int cantidadMuertos = contarMuertosVivientes(matriz);
     cout << "\nd. Cantidad de muertos vivientes en toda la matriz: " << cantidadMuertos << endl;
 
-    // e. Determinar si dos o m·s muertos vivientes se encuentran en la primera columna
+    // e. Determinar si dos o m√°s muertos vivientes se encuentran en la primera columna
     bool entradaPosible = true;
     for (size_t i = 0; i < filasMuertos.size(); ++i) {
         if (columnasMuertos[i] == 0) {
